@@ -1,36 +1,9 @@
-# History files
-.Rhistory
-.Rapp.history
 
-# Session Data files
-.RData
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
-.Rproj.user/
-
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-/*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
-rsconnect/
+# --2--
+```{r,warning = FALSE}
+df1 = df %>% select(1:12,-10,-11) 
+df1$Product_Category_1 = as.factor(df1$Product_Category_1)
+df1$Marital_Status = as.factor(df1$Marital_Status)
+df1$Occupation = as.factor(df1$Occupation)
+df1$User_ID = as.factor(df1$User_ID)
+summary(df1)
